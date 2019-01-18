@@ -7,7 +7,7 @@
 ```
 import httpSync from '../../utils/http-sync'
 ```
-##### Step 3, try to call...
+##### Step 3, try to call httpSync.httpRequestSync, just like 'wx.request' (but no callback, response will return through return of function)
 ```
 console.log(httpSync.httpRequestSync({
     url: 'https://your.domain.com'
