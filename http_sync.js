@@ -19,11 +19,11 @@ module.exports = {
             let promise = new Promise((resolved, rejected) => {
                 wx.request({
                     url: params.url,
-                    method: params.method | 'GET',
-                    data: params.data | {},
-                    header: params.header | {},
-                    dataType: params.dataType | 'json',
-                    responseType: params.responseType | 'text',
+                    method: params.method || 'GET',
+                    data: params.data || {},
+                    header: params.header || {},
+                    dataType: params.dataType || 'json',
+                    responseType: params.responseType || 'text',
                     success: function (result) {
                         resolved(result);
                     },
