@@ -3,13 +3,18 @@
 
 ### How to use?
 ##### Step 1, put http-sync.js and regenerator-runtime.js to directory 'utils' 
-##### Step 2, import http-sync to your page
+##### Step 2, import http-sync and regenerator-runtime to your Page
 ```
 import httpSync from '../../utils/http-sync'
+import httpSync from '../../utils/regenerator-runtime'
 ```
-##### Step 3, try to call httpSync.httpRequestSync, just like 'wx.request' (but no callback, response will return through return of function)
+##### Step 3, add 'async' to the head of function's definition, and add 'await' to your calling place
 ```
-console.log(httpSync.httpRequestSync({
-    url: 'https://your.domain.com'
-}));
+onClick: async function(e) {
+    ...
+    console.log(await httpSync.httpRequestSync({
+        url: 'https://your.domain.com'
+    }));
+    ...
+}
 ```
